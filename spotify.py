@@ -631,7 +631,7 @@ st.divider()
 
 with st.container():
     st.markdown("<h2 style='text-align: center; font-size: 12px;'>Kontak Saya</h2>", unsafe_allow_html=True)
-    c1,c2,c3=st.columns(3)
+    c1,c2,c3=st.columns([0.5,1,0.5])
     with c2:
      st.markdown(
     """
