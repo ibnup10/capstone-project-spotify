@@ -652,8 +652,8 @@ with st.container():
 
 
 with st.sidebar:
-    st.title('Sumber Data:')
+    st.title('Sumber:')
     st.write("[Developer Spotify](https://developer.spotify.com/)")
     st.write('[AntaraNews](https://www.antaranews.com/interaktif/semua-demam-korea-pada-waktunya/index.html)')
     st.write('[MySeoulBox Blog](https://myseoulbox.com/blogs/seoul-blog/best-k-pop-girls-groups-in-2023)')
-
+    st.write('[Hanceo Chart](https://www.hanteochart.com/)')
