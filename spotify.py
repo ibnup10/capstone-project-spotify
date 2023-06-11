@@ -162,7 +162,7 @@ with st.expander("Preview for No.1 K-pop Girl Group song On 2023"):
 )
     table_container = st.container()
     with table_container:
-        audio_file = open('D:/belajar_streamlit/NJOMG.mp3', 'rb')
+        audio_file = open('NJOMG.mp3', 'rb')
         st.audio(audio_file, format='audio/mp3')
 
 st.divider()
