@@ -639,7 +639,7 @@ with st.container():
         <a href='https://www.linkedin.com/in/ibnup10/'>
             <img src='https://img.icons8.com/?size=32&id=13930&format=png' alt='Gambar 1'>
         </a>
-        <a href='https://github.com/reznovka'>
+        <a href='https://github.com/ibnup10'>
             <img src='https://img.icons8.com/?size=32&id=63777&format=png' alt='Gambar 2'>
         </a>
         <a href='mailto:ibnupangestu1998@gmail.com'>
