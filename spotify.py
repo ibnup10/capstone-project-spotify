@@ -35,7 +35,7 @@ with st.expander(label='Lihat Penjelasan'):
 
 st.divider()
 
-st.markdown("<h3 style='text-align: center;'>Popularitas Girl Group pada Tahun 2023</h1>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>Top 10 Popularity Girl Group Band on 2023</h1>", unsafe_allow_html=True)
 
 col1, col2= st.columns(2)
 # Menambahkan garis tengah pada kolom 1
