@@ -106,7 +106,7 @@ top10_chart = chart.properties(
     title='Top 5 Song Girl Group K-pop on 2023'
 )
 st.altair_chart(top10_chart)
-     st.markdown(
+st.markdown(
     """
     <div style="text-align: justify;">
         <p>Jika anda ingin mendengarkan lagu ini, berikut dibawah ini adalah preview dari NewJeans-OMG beserta streaming dari Spotify atau YouTube.</p>
