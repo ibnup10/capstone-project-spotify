@@ -93,36 +93,19 @@ pivot_table = pivot_table.sort_values('rank') # Mengurutkan berdasarkan kolom ra
 pivot_table.insert(0, 'Peringkat', pivot_table['rank'])  # Memasukkan kolom "Rank" di posisi pertama
 pivot_table = pivot_table.drop(columns='rank')
 pivot_table = pivot_table.rename(columns={'name': 'Lagu', 'artist': 'Artis', 'popularity': 'Kepopuleran'})
-table_title = table_title = "<h3 style='font-size: 16px; text-align:center; margin:auto'>Top 5 Song Girl Group K-pop on 2023</h3>"
-st.markdown(table_title, unsafe_allow_html=True)
-pivot_table_style = pivot_table.style.set_table_styles(
-        [{
-        'selector': 'table',
-        'props': [
-            ('text-align', 'center'),  # Mengatur teks menjadi tengah
-            ('margin', 'auto'),  # Mengatur margin menjadi auto untuk pusat secara horizontal
-            ('display', 'block'),  # Mengatur tampilan tabel menjadi block untuk pusat secara vertikal
-        ]
-        }]
-    )
-hide_table_row_index = """
-            <style>
-            thead tr th:first-child {display:none}
-            tbody th {display:none}
-            </style>
-            """
-st.markdown(hide_table_row_index, unsafe_allow_html=True)
-
-st.table(pivot_table_style)
-with st.expander('Popularitas Girl Group Berdasarkan Lagu'):
-    st.markdown(
-    """
-    <div style="text-align: justify;">
-        <p>Ternyata Girl Group dibawah naungan HYBE LABES yaitu NewJeans memimpin dengan 3 lagu nya di 5 lagu teratas di tahun 2023, dan dua diantaranya datang dari Girl Group IVE dan LE SSERAFIM yang berduet dengan Nile Rodgers. Peringkat pertama dipimpin oleh NewJeans dengan lagunya yaitu "OMG". Dilansir oleh Hanteo Chart, penjualan Single Album “OMG” terjual lebih dari 480.000 eksemplar pada penjualan hari pertamanya saja. Lagu ini sering digunakan ataupun didengar dengan video-video di TikTok untuk dance cover</p>
-    </div>
-    """,
-    unsafe_allow_html=True
+#-
+chart_data = pd.DataFrame({
+    'Peringkat': pivot_table['Peringkat'],
+    'Kepopuleran': pivot_table['Kepopuleran']
+})
+chart = alt.Chart(chart_data).mark_bar().encode(
+    x='Peringkat',
+    y='Kepopuleran'
 )
+top10_chart = chart.properties(
+    title='Top 5 Song Girl Group K-pop on 2023'
+)
+st.altair_chart(top10_chart)
     st.markdown(
     """
     <div style="text-align: justify;">
